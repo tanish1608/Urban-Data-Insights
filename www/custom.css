@@ -1,0 +1,237 @@
+/* Custom CSS for Urban Data Insights Shiny App */
+
+/* Main dashboard styling */
+.content-wrapper, .right-side {
+    background-color: #f4f4f4;
+}
+
+.main-header .navbar {
+    background-color: #367fa9 !important;
+}
+
+/* Value boxes styling */
+.small-box {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.small-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Box styling */
+.box {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.box-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+}
+
+.box-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Plot containers */
+.plotly {
+    background-color: white;
+    border-radius: 6px;
+}
+
+/* Data table styling */
+.dataTables_wrapper {
+    padding: 10px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color: #555;
+    font-size: 12px;
+}
+
+/* Sidebar menu styling */
+.sidebar-menu li a {
+    color: #444;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #e1e1e1;
+}
+
+.sidebar-menu li.active a {
+    background-color: #367fa9;
+    color: white;
+}
+
+/* Filter controls styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #367fa9;
+    border-color: #2e6da4;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #2e6da4;
+    border-color: #245580;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-info {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .small-box .icon {
+        display: none;
+    }
+    
+    .box {
+        margin-bottom: 15px;
+    }
+    
+    .box-title {
+        font-size: 14px;
+    }
+}
+
+/* Tab panel styling */
+.nav-tabs {
+    border-bottom: 2px solid #367fa9;
+    margin-bottom: 20px;
+}
+
+.nav-tabs > li > a {
+    border-radius: 4px 4px 0 0;
+    color: #555;
+    font-weight: 500;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: #367fa9;
+    color: white;
+    border-color: #367fa9;
+}
+
+/* Loading spinner styling */
+.shiny-spinner-output-container {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Leaflet map customizations */
+.leaflet-container {
+    border-radius: 6px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 6px;
+}
+
+/* Animation for elements */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Print styles */
+@media print {
+    .main-sidebar,
+    .main-header,
+    .content-header {
+        display: none !important;
+    }
+    
+    .content-wrapper,
+    .right-side {
+        margin-left: 0 !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .box {
+        border: 2px solid #000;
+    }
+    
+    .btn-primary {
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .content-wrapper,
+    .right-side {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+    }
+    
+    .box {
+        background-color: #34495e;
+        color: #ecf0f1;
+    }
+    
+    .box-header {
+        border-bottom-color: #4a5f7a;
+    }
+}
